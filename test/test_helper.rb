@@ -1,5 +1,5 @@
-require 'handlebars_assets'
-require 'handlebars_assets/tilt_handlebars'
-require 'handlebars_assets/handlebars'
+require 'dust_assets'
+require 'dust_assets/tilt_dust'
+require 'dust_assets/dust'
 
 require 'test/unit'
