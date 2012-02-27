@@ -1,1 +1,1 @@
-rvm use @dust_assets
+rvm use 1.9.2@dust_assets

@@ -7,34 +7,17 @@ module DustAssets
     end
 
     def evaluate(scope, locals, &block)
-      name = basename(scope.logical_path)
-      compiled_hbs = Handlebars.precompile(data)
-
-      if name.start_with?('_')
-        partial_name = name[1..-1].inspect
-        <<-PARTIAL
-          (function() {
-            Handlebars.registerPartial(#{partial_name}, Handlebars.template(#{compiled_hbs}));
-          }).call(this);
-        PARTIAL
-      else
-        template_name = scope.logical_path.inspect
-        <<-TEMPLATE
-          (function() {
-            this.HandlebarsTemplates || (this.HandlebarsTemplates = {});
-            this.HandlebarsTemplates[#{template_name}] = Handlebars.template(#{compiled_hbs});
-            return HandlebarsTemplates[#{template_name}];
-          }).call(this);
-        TEMPLATE
-      end
-    end
-
-    protected
-
-    def basename(path)
-      path.gsub(%r{.*/}, '')
+      template_name = scope.logical_path.to_s.gsub('"', "")
+      compiled = Dust.precompile(data, template_name)
+      <<-TEMPLATE
+        (function(ctx, callback) {
+          dust.loadSource('#{compiled}');
+          dust.render('#{template_name}', ctx, callback);
+        })
+      TEMPLATE
     end
 
     def prepare; end
+
   end
 end
