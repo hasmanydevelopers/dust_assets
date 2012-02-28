@@ -11,7 +11,7 @@ module DustAssets
       compiled = Dust.precompile(data, template_name)
       <<-TEMPLATE
         (function(ctx, callback) {
-          dust.loadSource("#{compiled}");
+          dust.loadSource(#{compiled.inspect});
           dust.render('#{template_name}', ctx, callback);
         })
       TEMPLATE
