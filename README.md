@@ -1,7 +1,7 @@
 # dust.js for the Rails asset pipeline
 
-First of all! The credits goes to [handlebars_assets](http://github.com/leshill/handlebars_assets/). 
-`dust_assets` allows you to use dust.js templates within Rails applications.
+First of all! The credits goes to [handlebars_assets](http://github.com/leshill/handlebars_assets/) we used this gem as a base for `dust_assets`. 
+The `dust_assets` gem allows you to use dust.js templates within Rails applications.
 
 ## dust.js
 
