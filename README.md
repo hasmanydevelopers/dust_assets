@@ -71,6 +71,10 @@ In JavaScript should be something like this:
   });
 ```
 
+# Sample Rails 3 application using `dust_assets`:
+
+In order to show some basic usage of the gem you can take a look at [`dust_assets_example`](https://github.com/hasmanydevelopers/dust_assests_example).
+
 # Thanks
 
 Thank you Aleksander Williams (@akdubya) for [dust.js](https://github.com/akdubya/dustjs).
