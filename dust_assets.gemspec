@@ -5,9 +5,9 @@ require "dust_assets/version"
 Gem::Specification.new do |s|
   s.name        = "dust_assets"
   s.version     = DustAssets::VERSION
-  s.authors     = ["Jose Narvaez", "Manuel Mujica"]
-  s.email       = ["goyox86@gmail.com", "evilsaurer@gmail.com"]
-  s.homepage    = ""
+  s.authors     = ["Anderson Sequera", "Jose Narvaez", "Manuel Mujica"]
+  s.email       = ["andersonsp24@gmail.com", "goyox86@gmail.com", "evilsaurer@gmail.com"]
+  s.homepage    = "http://github.com/hasmanydevelopers/dust_assets"
   s.summary     = "Compile Dust templates in the Rails asset pipeline."
   s.description = "Compile Dust templates in the Rails asset pipeline."
 
