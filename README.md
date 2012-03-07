@@ -14,7 +14,7 @@ could be used by other gems as well.
 Load `dust_assets` in your `Gemfile` as part of the `assets` group
 
     group :assets do
-      gem 'handlebars_assets'
+      gem 'dust_assets'
     end
 
 Then run 'bundle install'
