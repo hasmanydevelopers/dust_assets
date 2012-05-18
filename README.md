@@ -73,7 +73,7 @@ In JavaScript should be something like this:
 
 # Example Rails 3 application using ´dust_assets´:
 
-You can go to [`dust_assests_example`](https://github.com/hasmanydevelopers/dust_assests_example) and  
+You can go to [`dust_assets_example`](https://github.com/hasmanydevelopers/dust_assets_example) and  
 see some basic usage of `dust_assets`.
 
 # Thanks
